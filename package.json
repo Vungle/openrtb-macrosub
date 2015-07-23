@@ -14,11 +14,11 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/Vungle/openrtb-marcosub"
+    "url": "https://github.com/Vungle/openrtb-macrosub.git"
   },
   "main": "index.js",
   "engines": {
-    "node": "^0.10.33"
+    "node": ">=0.10.0"
   },
   "scripts": {
     "test": "mocha test"
