@@ -1,0 +1,11 @@
+.DS_Store
+.idea/**
+node_modules
+*~
+*.iml
+*.ipr
+*.log
+*.sublime-project
+*.sublime-workspace
+*.swp
+*.tmproj

@@ -1,0 +1,24 @@
+{
+  "name": "openrtb-marcosub",
+  "version": "0.1.0",
+  "description": "A NodeJS implementation of the OpenRTB 2.3 macro substritution.",
+  "author": "Steve Jiang <steve.jiang@vungle.com>",
+  "license": "MIT",
+  "keywords": [
+    "openrtb",
+    "ad",
+    "exchange",
+    "bid",
+    "dsp",
+    "ssp"
+  ],
+  "main": "./lib/macro-substitutor.js",
+  "scripts": {
+    "test": "mocha test"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "mocha": "^2.2.5",
+    "should": "^7.0.2"
+  }
+}
