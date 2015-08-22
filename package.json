@@ -1,6 +1,6 @@
 {
   "name": "openrtb-macrosub",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A NodeJS implementation of the OpenRTB 2.3 macro substritution.",
   "author": "Steve Jiang <steve.jiang@vungle.com>",
   "license": "MIT",
