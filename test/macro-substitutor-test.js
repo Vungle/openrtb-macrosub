@@ -62,6 +62,22 @@ describe('OpenRTB Macro Substitutor', function() {
       sub('${auction_id}', {id: '123'}).should.equal('${auction_id}');
       sub('${auction_id}${AUCTION_ID}', {id: '123'}).should.equal('${auction_id}123');
     });
+
+    it('should encode substitution values', function() {
+      sub('${AUCTION_ID}', {id: '12&3'}, true).should.equal('12%263');
+      sub('${AUCTION_PRICE}', {price: 3.33}, true).should.equal('3.33');
+      sub('${AUCTION_AD_ID}', {adid: 'a@b|c:d'}, true)
+          .should.equal('a%40b%7Cc%3Ad');
+    });
+
+    it('should not modified the original substitution avlue map', function() {
+      var valueMap = {
+        id: '$h0uldn\'t modify.'
+      };
+      sub('${AUCTION_ID}', valueMap, true)
+          .should.equal('%24h0uldn\'t%20modify.');
+      valueMap.id.should.equal('$h0uldn\'t modify.');
+    });
   });
 
   describe('in complicated substitution', function() {
